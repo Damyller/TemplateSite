@@ -1,0 +1,977 @@
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+   
+}
+
+header {
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+.container {
+   max-width: 1300px;
+   height: 100px;
+   margin: auto;
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+img {
+    width: 100px;
+    height: 80px;
+}
+
+.logoImg {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(242, 242, 242);
+}
+  
+.menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(250, 250, 250); 
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    display: block;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color:white;
+    display: flex;
+    padding: 15px; 
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    border-bottom:5px solid black;
+}
+
+.menu nav a:hover {
+    border-bottom: 5px solid #B28756;
+}
+
+.banner {
+    background-color: #333;
+    height: calc(100vh - 100px);
+    background-image: url('./Imagens/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.banner .sliders {
+  width: 1000vw;
+  height: 100%;
+}
+
+.banner .slider {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.banner .sliderarea {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.banner h1 span {
+    color: #B28756;
+}
+
+.banner h2 {
+    text-transform: uppercase;
+    margin-top: 20px;
+
+}
+
+.banner a {
+    display: block;
+    background-color: #B28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.banner .sliders_pointers {
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Esse CSS, é utilizado para criar aquelas bolinhas do efeito carrosel, porém elas funcionarem é responsabilidade com o JS */
+.banner .pointer {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.banner .pointer.active {
+    background-color: #B28756;
+}
+
+.default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.default .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.default .section-desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #CCC;
+    margin-top: 12px;
+    margin-bottom: 40px;
+}
+
+.default .section-body {
+    margin: auto;
+    max-width: 1140px;
+}
+
+.default .light {
+    background-color: white;
+}
+
+.default.light .section-title,
+.default.light .section-body{
+    color: black;
+}
+
+.default.dark {
+    background-color: black;
+}
+
+.default.dark .section-title,
+.default.dark .section-body {
+    color: white;
+}
+
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-weight: 600;
+    margin-top: 25px;
+    border-radius: 15px;
+
+}
+
+/*
+CSS DE AREAS ESPECIFICAS
+*/
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left {
+    flex: 1;
+    font-weight: bold;
+    color:black;
+
+}
+
+.section-aboutus--right {
+    width: 500px;
+    text-align: center;
+}
+
+.section-aboutus--right img {
+    width: 480px;
+    box-shadow: 0px 0px 10px #333;
+    height: 300px;
+}
+
+.section-aboutus--left p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/* 
+CSS da area de Serviços
+*/
+
+.section-services {
+    display: flex;
+}
+
+.section-service {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+
+.section-service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+
+}
+
+.section-service p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #999;
+}
+
+.section-service:first-child {
+    border-left: 1px solid #333;
+}
+
+/* CSS da parte de filters
+*/
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projects--filters {
+    border: 1px solid #ccc;
+    background-color: #EEE;
+    border-radius: 30px;
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+
+.section-projects--filters ul,
+.section-projects--filters li {
+    list-style: none;
+    
+}
+
+.section-projects--filters li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #CCC;
+    color: #555;
+    border-bottom: 3px solid #EEE;
+}
+
+.section-projects--filters li:hover,
+.section-projects--filters .active {
+    border-bottom: 3px solid #B28756;
+    cursor: pointer;
+}
+
+.section-projects--filters li:first-child {
+    border-left: 0;
+}
+
+.section-projects--photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projects--photo {
+    width: 280px;
+}
+
+.section-projects--photoarea {
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+
+}
+
+.section-projects--photoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.section-projects--photoinfo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #EEE;
+    flex-direction: column;
+}
+
+.section-projects--photoinfo h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.section-projects--photoarea:hover .section-projects--photoinfo {
+    display: flex;
+}   
+
+/*
+CSS DE TIME
+*/
+
+.bg-team {
+    background-image:url('Imagens/bg.jpg') ;
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+}
+
+.section-team-area {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section-team {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.section-team .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+  
+.section-team .slider {
+      width: 280px;
+      height: 100%;
+      min-height: 300px;
+      display: inline-block;
+      background-color: #FFF;
+      margin-right: 20px;
+}
+  
+.section-team .sliderarea {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      color: black;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px;
+}
+
+.section-team .sliders_pointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-team .pointer {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.section-team .pointer.active {
+    background-color: #B28756;
+}
+
+/* 
+CONTEUDO DENTRO DA AREA DO SLIDERAREA
+*/
+.section-team--avatar {
+    width: 150px;
+    height: auto;
+}
+
+.section-team--name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+}
+
+.section-team--role {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.section-team--social {
+    display: flex;
+}   
+
+.section-team--social a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #CCC;
+    border-radius: 13px;
+    margin: 1px;
+    margin-top: 10px;
+}
+
+.section-team--social a:hover {
+    background-color: #B28756;
+}
+
+
+.section-team--social a img {
+    width: 12px;
+    height: 12px;
+}
+
+/*
+Area dos Feedback clientes
+*/
+
+.section-testimonials {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-testimonials .sliders {
+    width: 1000vw;
+    height: 100%;
+}
+
+.section-testimonials .slider {
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+}
+
+.section-testimonials .sliderarea { 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+}
+
+.section-testimonials .section-testimonials--avatar {
+    width: 150px;
+    height: auto;
+}
+
+.section-testimonials--name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.section-testimonials--role {
+    font-size: 14px;
+}
+
+.section-testimonials--quoteimg {
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+}
+
+.section-testimonials--quote {
+    margin-top: 10px;
+    font-size: 13px;
+    max-width: 700px;
+    color: #555;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.section-testimonials .pointer {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.section-testimonials .sliders_pointers {
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-testimonials .pointer:hover {
+    background-color: #B28756;
+}
+
+.section-testimonials .pointer.active {
+    background-color: #B28756;
+}
+
+
+/*
+CSS DAS MARCAS AMIGAS
+*/
+
+
+.section-partiners {
+    border-top: 1px solid #DDD;
+    border-bottom: 1px solid #DDD;
+    background-color: rgb(160, 160, 160);
+}
+
+.section-partiners .section-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-body .section-marca {
+    margin: 50px;
+    text-align: center;
+}
+
+.section-partiners--area {
+    display: flex;
+    align-items: center;
+}
+
+/* 
+CSS DOS PRICES
+*/
+
+.section-price {
+    display: flex;
+}
+
+.section-price--item {
+    flex: 1;
+    background-color: rgb(195, 195, 195);
+    text-align: center;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.section-price--item .section-price--item-point{
+    line-height: 35px;
+}
+
+.section-price--item .section-price--item-name {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.section-price--item .section-price--item-price {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+.section-price--item .section-price--item-period {
+    color: #555;
+}
+
+.section-price--item .button {
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+.section-price--item .button:hover {
+    background-color: #B28756;
+}
+
+/*
+CSS PREMIUM
+*/
+.premium {
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.section-premium {
+    overflow: hidden;
+    
+}
+
+.sliderarea-item img {
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+}
+
+.sliderarea-right{
+    flex: 1;
+    
+    flex-direction: column;
+}
+
+.sliderarea {
+    display: flex;
+}
+
+.sliderarea .sliderarea-left {
+    flex: 1;
+    text-align: right;
+}
+
+.sliderarea-left img {
+    width: 300px;
+    height: auto;
+} 
+
+.sliderarea-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sliderarea-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.section-premium .sliders_pointers {
+    border-top: 1px solid rgb(204, 204, 204);
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+
+.section-premium .pointer {
+    height: 15px;
+    width: 15px;
+    border: 2px solid #B28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.section-premium .pointer:hover {
+    background-color: #B28756;
+}
+
+.section-premium .pointer.active {
+   background-color: #B28756;
+} 
+
+/*
+CSS FACTS
+*/
+
+.section-services-number {
+    display: flex;
+}
+
+.section-services-number .section-number {
+    font-size: 45px;
+    color: #B28756;
+    font-weight: 600;
+}
+
+.section-services-number .section-local {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+}
+
+.section-local p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+.section-local h4 {
+    font-size: 17px;
+    margin-top: 13px;
+}
+
+.section-line--bottom {
+    width: 20px;
+    border-bottom: 2px solid #B28756;
+    margin: auto;
+}
+
+/*
+CSS TELL ABOUT
+*/
+
+.section-share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF;
+    color: #999;
+}
+
+
+.section-share--legend {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+.section-share--legend img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  
+}
+
+.section-share--partiners {
+    font-size: 12px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.section-icon-share {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(144, 16, 16);
+    border-radius: 15px;
+}
+
+.section-icon-share img {
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+}
+
+/*
+CSS CONTATO
+*/
+
+.contact {
+    background-color: #F7F7F7;
+}
+
+.section-aboutus-contact {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-aboutus--slipt {
+    display: flex;
+}
+
+.section-aboutus--slipt input[type=text], .section-contact textarea {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #CCC;
+    outline: 0;
+    margin-top: 10px;
+}
+
+.section-aboutus-contact input[type=text]{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #CCC;
+    outline: 0;
+    margin-top: 10px;
+}
+
+.section-aboutus-contact textarea {
+    height: 100px;
+    resize: none;
+    display: block;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #CCC;
+    outline: 0;
+    margin-top: 10px;
+}
+
+.section-aboutus-contact input[type=submit] {
+    cursor: pointer;
+    border-color: #B28756;
+}
+
+/*
+CSS MAPA
+*/
+
+.section-map {
+    background-image: url('./Imagens/mapa.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-map--area {
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+
+.section-map--info {
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    color: black;
+}
+
+.section-map--info-item{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.section-map--info-item-img {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #CCC;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+
+.section-map--info-item-img img {
+    width: 15px;
+    height: auto;
+}
+
+/*
+CSS FOOTER
+*/
+
+footer {
+    background-color: black;
+}
+.section-footer {
+    max-width: 1140px;
+    margin: auto;
+    color: #FFF;
+    display: flex;
+}
+
+
+.section-footer{
+    flex: 1;
+}
+
+.section-footer-left-icons {
+    display: flex;
+}
+
+.section-footer-left-icons-info {
+    width: 30px;
+    height: 30px;
+}
+
+.section-footer-left-icons-info img {
+    width: 15px;
+    height: auto;
+}
+
+.section-footer-midle {
+    flex: 1;
+}
+
+.section-footer-item.area2 {
+    color: #999;
+    line-height: 20px;
+    font-size: 13px;
+    padding: 0 10px 10px 10px;
+}
+
+.section-aboutus--slipt input[type="text"] {
+    align-items: center;
+    text-align: center;
+}
+
+.section-footer-item.area3 {
+    padding: 30px;
+    background-color: #333;
+} 
